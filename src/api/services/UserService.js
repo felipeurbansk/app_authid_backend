@@ -19,6 +19,7 @@ module.exports = {
             
             return {user: user_create, token: await createToken( user_create.id )};
         } catch (err) {
+            console.log({err})
             return { error: 'Registration failed.', err }
         }
     },
